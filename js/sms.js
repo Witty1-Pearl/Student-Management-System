@@ -6,9 +6,11 @@ const courseEle = document.querySelector("#course");
 const addBtn = document.querySelector("#addBtn");
 const StudentList = document.querySelector("#StudentList");
 const counter = document.querySelector("#counter");
+
 //add event listeners
 addBtn.addEventListener('click', addStudent);
-//first function to call events that happens when you click the addBook button
+
+//first function to call events that occurs when user clicks the register student button
 function addStudent(e) {
     e.preventDefault();
     let student = {
@@ -33,7 +35,7 @@ function addStudentToTable(student){
     `;
     StudentList.appendChild(row);
 }
-// 3rd function to store the books
+// 3rd function to store students details
 function storeStudent(student) {
     let students;
     if (localStorage.getItem('students') ===null){
@@ -49,7 +51,7 @@ function storeStudent(student) {
         alert("New student added");
     }
 }
-// fourth function to fetch the books that have been stored
+// fourth function to fetch the students that have been stored
 function fetchStudents() {
     let students;
     if (localStorage.getItem('students') === null) {
@@ -60,7 +62,7 @@ function fetchStudents() {
     }
     return students;
 }
-//5th function to display the books that have been fetched
+//5th function to display Student details that have been fetched
 function displayStudents() {
     const students = fetchStudents();
      for (const student of students) {
