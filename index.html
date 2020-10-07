@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Management System</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="displayStudents()">
+    <section class="container">
+        <div class="row">
+            <div class="col-md-12 text-center mt-5">
+                <h1><i></i>Students <span class="text-danger"> Management </span> System</h1>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 col-sm-12">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name" autofocus id="name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <select id="gender" class="form-control">
+                          <option selected>Gender...</option>
+                          <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select id="course" class="form-control">
+                          <option selected>Courses...</option>
+                          <option value="C#">C</option>
+                      <option value="Python">Python</option>
+                      <option value="Java">Java</option>
+                      <option value="JavaScript">JavaScript</option>
+                      <option value="C++">Pascal</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group">
+                        <input type="text" class="form-control btn btn-danger btn-block" value="Register Student" id="addBtn">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control btn  btn-block" value=" 0 Students Registered" id="counter">
+                    </div>
+                </form>
+                <table class="table table-striped mt-5">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>email</th>
+                            <th>course</th>
+                            <th>Gender</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="StudentList"></tbody>
+                </table>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </section>
+    <script src="js/sms.js"></script>
+</body>
+</html>
